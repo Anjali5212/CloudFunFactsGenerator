@@ -1,0 +1,184 @@
+{
+  "CloudFacts": [
+    {
+      "PutRequest": {
+        "Item": {
+          "FactID": {
+            "S": "1"
+          },
+          "FactText": {
+            "S": "AWS S3 was one of the very first AWS services, launched in 2006."
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "FactID": {
+            "S": "2"
+          },
+          "FactText": {
+            "S": "Netflix runs almost all of its infrastructure on AWS."
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "FactID": {
+            "S": "3"
+          },
+          "FactText": {
+            "S": "Cloud computing can save companies up to 30% on IT costs."
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "FactID": {
+            "S": "4"
+          },
+          "FactText": {
+            "S": "NASA uses AWS to store and share Mars mission data with the public."
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "FactID": {
+            "S": "5"
+          },
+          "FactText": {
+            "S": "AWS has more than 200 fully featured services today."
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "FactID": {
+            "S": "6"
+          },
+          "FactText": {
+            "S": "The 'cloud' doesn't float in the sky, it's made of giant data centers on Earth."
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "FactID": {
+            "S": "7"
+          },
+          "FactText": {
+            "S": "More than 90% of Fortune 100 companies use AWS."
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "FactID": {
+            "S": "8"
+          },
+          "FactText": {
+            "S": "AWS data centers are so secure that they require retina scans and 24/7 guards."
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "FactID": {
+            "S": "9"
+          },
+          "FactText": {
+            "S": "Serverless doesn't mean there are no servers, it just means you don't manage them."
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "FactID": {
+            "S": "10"
+          },
+          "FactText": {
+            "S": "Each AWS Availability Zone has at least one independent power source and cooling system."
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "FactID": {
+            "S": "11"
+          },
+          "FactText": {
+            "S": "Amazon once accidentally took down parts of the internet when S3 had an outage in 2017."
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "FactID": {
+            "S": "12"
+          },
+          "FactText": {
+            "S": "The fastest-growing AWS service is Amazon SageMaker, used for Machine Learning."
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "FactID": {
+            "S": "13"
+          },
+          "FactText": {
+            "S": "The word 'cloud' became popular in the 1990s as a metaphor for the internet."
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "FactID": {
+            "S": "14"
+          },
+          "FactText": {
+            "S": "AWS Lambda can automatically scale from zero to thousands of requests per second."
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "FactID": {
+            "S": "15"
+          },
+          "FactText": {
+            "S": "More data is stored in the cloud today than in all personal computers combined."
+          }
+        }
+      }
+    }
+  ]
+}
