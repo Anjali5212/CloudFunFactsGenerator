@@ -16,10 +16,15 @@ A serverless web app that serves witty cloud computing facts. A static frontend 
 Request flow:
 
 -The user opens the Amplify-hosted page and clicks Generate Fun Fact.
+
 -The page calls GET /funfact on API Gateway.
+
 -API Gateway triggers the Lambda function.
+
 -Lambda scans the CloudFacts table and picks a random fact.
+
 -Lambda sends the fact to Claude Haiku 4.5 on Bedrock and asks for a short, witty rewrite in plain text.
+
 -The rewritten fact is returned to the browser. If Bedrock fails, the original fact is returned instead.
 
 **Setup**
@@ -32,7 +37,9 @@ Request flow:
 
 4) **Lambda:** Create a Python function, paste `backend/lambda_function.py`, and set the timeout to 15-30 seconds. Attach these managed IAM policies to the function's execution role:
    - `AWSLambdaBasicExecutionRole` (lets Lambda write logs to CloudWatch)
+   
    - `AmazonDynamoDBReadOnlyAccess` (lets Lambda read facts from the `CloudFacts` table)
+   
    - `AmazonBedrockFullAccess` (lets Lambda invoke Claude Haiku 4.5 on Bedrock)
    
 > Note: These managed policies keep the setup simple for learning. In production, replace them with a custom policy that allows only `dynamodb:Scan` 
@@ -46,13 +53,19 @@ on the `CloudFacts` table and `bedrock:InvokeModel` on the specific model.
 
 **Cost control**
 -Uses Claude Haiku 4.5, the lowest-cost Claude model, which is enough for rewriting a short fact.
+
 -Output is capped with max_tokens (150), so each response has a limit on its cost.
+
 -Bedrock is billed per token, so each request costs a tiny fraction of a cent.
 
 
 **What I learned**
 -Designing a serverless architecture with Amplify, API Gateway, Lambda, DynamoDB, and Bedrock
+
 -Configuring IAM permissions so Lambda can read DynamoDB and invoke Bedrock
+
 -Enabling CORS in API Gateway for a cross-origin frontend
+
 -Writing prompts and output handling to get clean plain-text responses from a model
+
 -Choosing a low-cost model and setting token limits to keep spending down
