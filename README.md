@@ -29,6 +29,7 @@ Request flow:
    aws dynamodb batch-write-item --request-items file://data/data.json
    
 3)**Bedrock**: In the Bedrock console (us-east-1), open the model catalog, select Claude Haiku 4.5, and submit the use case details if prompted. Confirm it works in the playground.
+
 4) **Lambda:** Create a Python function, paste `backend/lambda_function.py`, and set the timeout to 15-30 seconds. Attach these managed IAM policies to the function's execution role:
    - `AWSLambdaBasicExecutionRole` (lets Lambda write logs to CloudWatch)
    - `AmazonDynamoDBReadOnlyAccess` (lets Lambda read facts from the `CloudFacts` table)
@@ -38,7 +39,9 @@ Request flow:
 on the `CloudFacts` table and `bedrock:InvokeModel` on the specific model.
 
 5) **API Gateway:** Create an HTTP API with a GET /funfact route integrated with the Lambda function.
+
 6)**Frontend:** In frontend/index.html, replace YOUR_API_GATEWAY_URL with your API invoke URL (for example https://abc123.execute-api.us-east-1.amazonaws.com). Zip index.html and deploy it to Amplify using "Deploy without Git provider".
+
 7)**CORS:** In API Gateway, add your Amplify URL as an allowed origin, with methods GET and OPTIONS and header content-type.
 
 **Cost control**
